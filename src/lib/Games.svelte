@@ -23,7 +23,7 @@
         <li class="menu-title">
           <span>Puzzles</span>
         </li>
-        <li><a href="#." on:click|preventDefault={() => lGame("tetris")}>Tetris (arrows)</a></li> <!-- TODO -->
+        <li><a href="#." on:click|preventDefault={() => lGame("tetris")} disabled>Tetris (coming soon)</a></li> <!-- TODO -->
         <li><a href="#." on:click|preventDefault={() => lGame("2048")}>2048 (mouse)</a></li>
         <li><a href="#." on:click|preventDefault={() => lGame("onoff")}>OnOff (arrows + space)</a></li>
         <li class="menu-title">
@@ -33,7 +33,7 @@
         <li><a href="#." on:click|preventDefault={() => lGame("ducksoup")}>DuckSoup (arrows + d & f)</a></li>
         <li><a href="#." on:click|preventDefault={() => lGame("domeromantik")}>Dome Romantik (arrows + space)</a></li>
         <li><a href="#." on:click|preventDefault={() => lGame("norman")}>Norman the Necromancer (mouse)</a></li>
-        <li><a href="#." on:click|preventDefault={() => lGame("picodoom")} disabled>Pico Doom (arrows + z & x)</a></li>
+        <li><a href="#." on:click|preventDefault={() => lGame("poom")}>Pico Doom (arrows + z & x)</a></li>
         <li class="menu-title">
           <span>External sites</span>
         </li>
