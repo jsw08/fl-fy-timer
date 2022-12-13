@@ -2,22 +2,43 @@
   import { menu } from '../stores'
   import faClock from '../assets/clock.svg'
   import faMenu from '../assets/menu.svg'
+  import { onMount } from 'svelte';
 
   type GMenu = "ingame" | "inmenu";
   let GMenu : GMenu = "inmenu"
   let GSource : string;
+  let iframe;
 
-  const lGame = (g) => {
+  let focus : Function;
+  let lGame = (g) => {
     GMenu = "ingame"
     GSource = `/games/${g}`
+    focus()
   }
-  const lExternal = (g) => {
+  let lExternal = (g) => {
     GMenu = "ingame"
     GSource = g
+    focus()
   }
+
+  onMount(() => {
+    focus = iframe.focus()
+    
+    lGame = (g) => {
+      GMenu = "ingame"
+      GSource = `/games/${g}`
+      focus()
+    }
+    lExternal = (g) => {
+      GMenu = "ingame"
+      GSource = g
+      focus()
+    }
+  })
 </script>
 
 {#if GMenu === "inmenu"}
+  <iframe class="hidden" bind:this={iframe}/>
   <div class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-120 lg:scale-125  w-fit">
       <ul class="menu bg-base-100 w-full p-2 rounded-box">
         <li class="menu-title">
@@ -47,7 +68,7 @@
       </div>
   </div>
 {:else if GMenu === "ingame"}
-  <iframe src={GSource} frameborder="0" class="w-full h-screen" title="Game window.">Your browser doesn't support iframes. It surprises me that you could open this menu lmao.</iframe>
+  <iframe bind:this={iframe} src={GSource} frameborder="0" class="w-full h-screen" title="Game window." class:hidden={GMenu !== "ingame"}>Your browser doesn't support iframes. It surprises me that you could open this menu lmao.</iframe>
   <div class="absolute right-0 bottom-0 p-4 flex flex-col gap-2 text-xl text-white">
     <button class="btn text-2xl" title="Go back to games menu." on:click={() => GMenu = "inmenu"}><img src={faMenu} alt="Menu icon."></button>
     <button class="btn text-2xl" title="Go back to countdown." on:click={() => $menu = "counter"}><img src={faClock} alt="Clock icon."></button>
