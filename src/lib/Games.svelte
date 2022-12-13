@@ -1,0 +1,53 @@
+<script lang="ts">
+  import { menu } from '../stores'
+  import faClock from '../assets/clock.svg'
+  import faMenu from '../assets/menu.svg'
+
+  type GMenu = "ingame" | "inmenu";
+  let GMenu : GMenu = "inmenu"
+  let GSource : string;
+
+  const lGame = (g) => {
+    GMenu = "ingame"
+    GSource = `/games/${g}`
+  }
+  const lExternal = (g) => {
+    GMenu = "ingame"
+    GSource = g
+  }
+</script>
+
+{#if GMenu === "inmenu"}
+  <div class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-120 md:scale-150 w-fit">
+      <ul class="menu bg-base-100 w-full p-2 rounded-box">
+        <li class="menu-title">
+          <span>Puzzles</span>
+        </li>
+        <li><a href="#." on:click|preventDefault={() => lGame("tetris")}>Tetris</a></li>
+        <li><a href="#." on:click|preventDefault={() => lGame("2048")}>2048</a></li> <!-- check -->
+        <li><a href="#." on:click|preventDefault={() => lGame("onoff")}>OnOff (keyboard only)</a></li> <!-- check-->
+        <li class="menu-title">
+          <span>Action games</span>
+        </li>
+        <li><a href="#." on:click|preventDefault={() => lGame("underrun")}>Underrun</a></li> <!-- check -->
+        <li><a href="#." on:click|preventDefault={() => lGame("norman")}>Norman the Necromancer</a></li> <!-- check -->
+        <li><a href="#." on:click|preventDefault={() => lGame("picodoom")} disabled>Pico Doom (coming soon)</a></li>
+        <li class="menu-title">
+          <span>External sites</span>
+        </li>
+        <li><a href="#." on:click|preventDefault={() => lExternal("https://jsw-hub.netlify.app")}>Jsw-Hub</a></li>
+      </ul>
+      <br>
+      <div class="btn-group bg-base-100 w-full p-2 rounded-box">
+        <button class="btn btn-sm" on:click={() => $menu = "shorts"}>Shortcuts</button>
+        <button class="btn btn-sm" on:click={() => $menu = "counter"}>Countdown</button>
+        <button class="btn btn-sm btn-active" on:click={() => $menu = "games"}>Games</button>
+      </div>
+  </div>
+{:else if GMenu === "ingame"}
+  <iframe src={GSource} frameborder="0" class="w-full h-screen" title="Game window.">Your browser doesn't support iframes. It surprises me that you could open this menu lmao.</iframe>
+  <div class="absolute right-0 bottom-0 p-4 flex flex-col gap-2 text-xl text-white">
+    <button class="btn text-2xl" title="Go back to games menu."><img src={faMenu} alt="Menu icon."></button>
+    <button class="btn text-2xl" title="Go back to countdown."><img src={faClock} alt="Clock icon."></button>
+  </div>
+{/if}
