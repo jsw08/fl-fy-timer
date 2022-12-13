@@ -23,15 +23,17 @@
         <li class="menu-title">
           <span>Puzzles</span>
         </li>
-        <li><a href="#." on:click|preventDefault={() => lGame("tetris")}>Tetris</a></li>
-        <li><a href="#." on:click|preventDefault={() => lGame("2048")}>2048</a></li> <!-- check -->
-        <li><a href="#." on:click|preventDefault={() => lGame("onoff")}>OnOff (keyboard only)</a></li> <!-- check-->
+        <li><a href="#." on:click|preventDefault={() => lGame("tetris")}>Tetris (arrows)</a></li> <!-- TODO -->
+        <li><a href="#." on:click|preventDefault={() => lGame("2048")}>2048 (mouse)</a></li>
+        <li><a href="#." on:click|preventDefault={() => lGame("onoff")}>OnOff (arrows + space)</a></li>
         <li class="menu-title">
           <span>Action games</span>
         </li>
-        <li><a href="#." on:click|preventDefault={() => lGame("underrun")}>Underrun</a></li> <!-- check -->
-        <li><a href="#." on:click|preventDefault={() => lGame("norman")}>Norman the Necromancer</a></li> <!-- check -->
-        <li><a href="#." on:click|preventDefault={() => lGame("picodoom")} disabled>Pico Doom (coming soon)</a></li>
+        <li><a href="#." on:click|preventDefault={() => lGame("liar")}>The liar (arrows + z & x)</a></li> 
+        <li><a href="#." on:click|preventDefault={() => lGame("ducksoup")}>DuckSoup (arrows + d & f)</a></li>
+        <li><a href="#." on:click|preventDefault={() => lGame("domeromantik")}>Dome Romantik (arrows + space)</a></li>
+        <li><a href="#." on:click|preventDefault={() => lGame("norman")}>Norman the Necromancer (mouse)</a></li>
+        <li><a href="#." on:click|preventDefault={() => lGame("picodoom")} disabled>Pico Doom (arrows + z & x)</a></li>
         <li class="menu-title">
           <span>External sites</span>
         </li>
