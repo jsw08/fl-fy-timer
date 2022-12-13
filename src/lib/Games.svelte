@@ -47,7 +47,7 @@
 {:else if GMenu === "ingame"}
   <iframe src={GSource} frameborder="0" class="w-full h-screen" title="Game window.">Your browser doesn't support iframes. It surprises me that you could open this menu lmao.</iframe>
   <div class="absolute right-0 bottom-0 p-4 flex flex-col gap-2 text-xl text-white">
-    <button class="btn text-2xl" title="Go back to games menu."><img src={faMenu} alt="Menu icon."></button>
-    <button class="btn text-2xl" title="Go back to countdown."><img src={faClock} alt="Clock icon."></button>
+    <button class="btn text-2xl" title="Go back to games menu." on:click={() => GMenu = "inmenu"}><img src={faMenu} alt="Menu icon."></button>
+    <button class="btn text-2xl" title="Go back to countdown." on:click={() => $menu = "counter"}><img src={faClock} alt="Clock icon."></button>
   </div>
 {/if}

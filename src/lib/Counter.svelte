@@ -105,7 +105,7 @@
   }
 </script>
 
-  <div class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-120 md:scale-150 text-center" on:click={click} on:keypress={click}>
+  <div class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-120 md:scale-150 text-center" on:click={click} on:keypress={click} on:contextmenu|preventDefault={rClick}>
     <div class="grid grid-flow-col gap-5 text-center auto-cols-max">
       <div class="flex flex-col">
         <span class="countdown font-mono text-5xl">
