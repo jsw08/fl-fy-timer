@@ -18,8 +18,8 @@
 </script>
 
 {#if GMenu === "inmenu"}
-  <div class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-110 md:scale-100 lg:scale-120 w-fit max-h-full flex flex-col">
-      <ul class="menu bg-base-100 w-full p-2 rounded-box overflow-scroll grow">
+  <div class="bg-base-200 p-4 rounded-lg shadow-lg xs:scale-90 sm:scale-90 md:scale-110 lg:scale-120 xl:scale-125 2xl scale-150 w-fit max-h-full flex flex-col ">
+      <ul class="menu bg-base-100 w-full p-2 rounded-box overflow-x-auto grow">
         <li class="menu-title">
           <span>Puzzles</span>
         </li>
