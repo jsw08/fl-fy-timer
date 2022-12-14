@@ -1,7 +1,7 @@
 <script lang="ts">
   import { menu } from '../stores'
 </script>
-<div class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-120 md:scale-125  w-fit">
+<div class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-115 md:scale-120 xl:scale-125  w-fit">
   <ul class="menu bg-base-100 w-full p-2 rounded-box">
     <li class="menu-title">
       <span>School</span>
