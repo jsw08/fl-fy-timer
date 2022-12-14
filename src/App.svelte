@@ -6,7 +6,7 @@
 
 </script>
 
-<main class="w-full h-screen flex justify-center items-center">
+<main class="w-full h-screen flex justify-center items-center p-12">
   {#if $menu === "counter"}
     <Counter/> 
   {:else if $menu === "shorts"}

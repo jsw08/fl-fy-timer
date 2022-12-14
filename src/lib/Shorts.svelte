@@ -1,8 +1,8 @@
 <script lang="ts">
   import { menu } from '../stores'
 </script>
-<div class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-110 md:scale-100 lg:scale-120 w-fit">
-  <ul class="menu bg-base-100 w-full p-2 rounded-box">
+<div class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-110 md:scale-100 lg:scale-120 w-fit max-h-full flex flex-col">
+  <ul class="menu bg-base-100 w-full p-2 rounded-box grow overflow-scroll">
     <li class="menu-title">
       <span>School</span>
     </li>
@@ -17,7 +17,7 @@
     <li><a href="https://docs.google.com" target="_blank" rel="noreferrer">Docs</a></li>
   </ul>
   <br>
-  <div class="btn-group bg-base-100 w-full p-2 rounded-box">
+  <div class="btn-group bg-base-100 w-full p-2 rounded-box flex-none">
     <button class="btn btn-sm btn-active" on:click={() => $menu = "shorts"}>Shortcuts</button>
     <button class="btn btn-sm" on:click={() => $menu = "counter"}>Countdown</button>
     <button class="btn btn-sm" on:click={() => $menu = "games"}>Games</button>

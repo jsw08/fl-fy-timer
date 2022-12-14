@@ -18,8 +18,8 @@
 </script>
 
 {#if GMenu === "inmenu"}
-  <div class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-110 md:scale-100 lg:scale-120 w-fit">
-      <ul class="menu bg-base-100 w-full p-2 rounded-box">
+  <div class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-110 md:scale-100 lg:scale-120 w-fit max-h-full flex flex-col">
+      <ul class="menu bg-base-100 w-full p-2 rounded-box overflow-scroll grow">
         <li class="menu-title">
           <span>Puzzles</span>
         </li>
@@ -40,7 +40,7 @@
         <li><a href="#." on:click|preventDefault={() => lExternal("https://jsw-hub.netlify.app")}>Jsw-Hub</a></li>
       </ul>
       <br>
-      <div class="btn-group bg-base-100 w-full p-2 rounded-box">
+      <div class="btn-group bg-base-100 w-full p-2 rounded-box flex-none">
         <button class="btn btn-sm" on:click={() => $menu = "shorts"}>Shortcuts</button>
         <button class="btn btn-sm" on:click={() => $menu = "counter"}>Countdown</button>
         <button class="btn btn-sm btn-active" on:click={() => $menu = "games"}>Games</button>
