@@ -120,7 +120,7 @@
 </script>
 
 <div
-  class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-120 md:scale-150 text-center"
+  class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-110 text-center"
   on:click={click}
   on:keypress={click}
   on:contextmenu|preventDefault={rClick}
