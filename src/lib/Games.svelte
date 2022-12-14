@@ -18,7 +18,7 @@
 </script>
 
 {#if GMenu === "inmenu"}
-  <div class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-110 md:scale-75 lg:scale-120 w-fit">
+  <div class="bg-base-200 p-4 rounded-lg shadow-lg sm:scale-110 md:scale-100 lg:scale-120 w-fit">
       <ul class="menu bg-base-100 w-full p-2 rounded-box">
         <li class="menu-title">
           <span>Puzzles</span>
