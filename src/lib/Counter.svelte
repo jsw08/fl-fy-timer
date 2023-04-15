@@ -15,51 +15,63 @@
 
   const classes: Array<Class> = [
     {
-      d: set(new Date(), { hours: 8, minutes: 30, seconds: 0 }),
+      d: set(new Date(), { hours: 8, minutes: 0, seconds: 0 }),
       t: "1st class",
     },
     {
-      d: set(new Date(), { hours: 9, minutes: 15, seconds: 0 }),
+      d: set(new Date(), { hours: 8, minutes: 45, seconds: 0 }),
       t: "2nd class",
     },
     {
-      d: set(new Date(), { hours: 10, minutes: 0, seconds: 0 }),
-      t: "3rd class",
-    },
-    {
-      d: set(new Date(), { hours: 10, minutes: 45, seconds: 0 }),
+      d: set(new Date(), { hours: 9, minutes: 30, seconds: 0 }),
       t: "1st break",
     },
     {
-      d: set(new Date(), { hours: 11, minutes: 0, seconds: 0 }),
+      d: set(new Date(), { hours: 9, minutes: 45, seconds: 0 }),
+      t: "3rd class",
+    },
+    {
+      d: set(new Date(), { hours: 10, minutes: 30, seconds: 0 }),
       t: "4th class",
     },
     {
-      d: set(new Date(), { hours: 11, minutes: 45, seconds: 0 }),
-      t: "5th class",
-    },
-    {
-      d: set(new Date(), { hours: 12, minutes: 30, seconds: 0 }),
+      d: set(new Date(), { hours: 11, minutes: 15, seconds: 0 }),
       t: "2nd break",
     },
     {
-      d: set(new Date(), { hours: 13, minutes: 0, seconds: 0 }),
+      d: set(new Date(), { hours: 11, minutes: 30, seconds: 0 }),
+      t: "5th class",
+
+    {
+      d: set(new Date(), { hours: 12, minutes: 15, seconds: 0 }),
       t: "6th class",
     },
     {
-      d: set(new Date(), { hours: 13, minutes: 45, seconds: 0 }),
+      d: set(new Date(), { hours: 13, minutes: 0, seconds: 0 }),
       t: "3rd break",
     },
     {
-      d: set(new Date(), { hours: 14, minutes: 30, seconds: 0 }),
+      d: set(new Date(), { hours: 13, minutes: 30, seconds: 0 }),
       t: "7th class",
     },
     {
-      d: set(new Date(), { hours: 14, minutes: 45, seconds: 0 }),
+      d: set(new Date(), { hours: 14, minutes: 15, seconds: 0 }),
       t: "8th class",
     },
     {
-      d: set(new Date(), { hours: 15, minutes: 30, seconds: 0 }),
+      d: set(new Date(), { hours: 15, minutes: 0, seconds: 0 }),
+      t: "4th break",
+    },
+    {
+      d: set(new Date(), { hours: 15, minutes: 5, seconds: 0 }),
+      t: "9th class",
+    },
+    {
+      d: set(new Date(), { hours: 15, minutes: 50, seconds: 0 }),
+      t: "10th class",
+    },
+    {
+      d: set(new Date(), { hours: 16, minutes: 35, seconds: 0 }),
       t: "The end :D",
     },
   ];
