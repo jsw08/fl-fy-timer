@@ -41,7 +41,7 @@
     {
       d: set(new Date(), { hours: 11, minutes: 30, seconds: 0 }),
       t: "5th class",
-
+    },
     {
       d: set(new Date(), { hours: 12, minutes: 15, seconds: 0 }),
       t: "6th class",
